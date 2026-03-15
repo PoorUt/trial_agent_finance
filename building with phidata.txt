@@ -1,0 +1,60 @@
+Phidata is an open-source framework for building AI agents and multi-agent systems in Python. It makes it easier to create agents that can reason, use tools, and have memory — without having to wire everything together from scratch.
+
+Core concepts:
+Agents
+The building block of Phidata. An agent is an LLM (like GPT-4 or Claude) combined with:
+
+Tools (web search, databases, APIs, etc.)
+Memory (remembers past conversations)
+Knowledge (retrieves info from your own documents)
+Instructions (custom behavior/persona)
+
+Teams / Multi-agent systems
+You can combine multiple specialized agents that collaborate — e.g., one agent searches the web, another analyzes data, another writes a report.
+Knowledge Bases
+You can feed agents your own data (PDFs, websites, databases) and they'll retrieve relevant info using RAG (Retrieval-Augmented Generation).
+Memory
+Agents can remember things across sessions, not just within a single conversation.
+
+Common use cases:
+
+Research agents that browse the web
+Data analyst agents that query databases
+Customer support bots with memory
+Document Q&A systems
+Autonomous multi-step task runners
+
+It's a solid choice if you want to get an agent up and running quickly with minimal boilerplate.
+
+so is it like langchain?
+
+Yes, at a high level they're similar — both are frameworks for building LLM-powered apps and agents. But there are some meaningful differences:
+Similarities:
+
+Both let you connect LLMs to tools, memory, and data sources
+Both support RAG (retrieval-augmented generation)
+Both work with multiple LLM providers (OpenAI, Anthropic, etc.)
+Both are Python-based and open source
+
+
+Key differences:
+Simplicity
+Phidata is generally considered much simpler and more beginner-friendly. LangChain is powerful but notorious for being verbose and having a steep learning curve with lots of abstractions (chains, runnables, etc.)
+Focus
+
+LangChain started as a framework for chaining LLM calls together and evolved into agents
+Phidata was built agent-first from the start — agents are the core primitive
+
+Built-in UI
+Phidata comes with a built-in playground UI to chat with your agents out of the box. LangChain doesn't have this natively (though LangSmith offers monitoring).
+Multi-agent
+Phidata has first-class support for agent teams. LangChain has multi-agent support but it's more complex to set up.
+
+Analogy:
+If LangChain is like a full toolkit with every possible tool, Phidata is like a well-organized starter kit — fewer options, but everything is easier to find and use.
+
+Which to choose?
+
+Just starting out or want quick results → Phidata
+Need maximum flexibility and a huge ecosystem → LangChain
+Building complex agent workflows specifically → also consider LangGraph (built on top of LangChain)
